@@ -1,0 +1,7 @@
+<h1>Create New {{ ucfirst(${{tableName}}) }}</h1>
+<form action="{{ route('${{tableName}}.store') }}" method="POST">
+    @csrf
+    <input type="text" name="title" placeholder="Title" required>
+    <textarea name="description" placeholder="Description"></textarea>
+    <button type="submit">Create</button>
+</form>

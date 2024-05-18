@@ -1,0 +1,7 @@
+<h1>{{ ucfirst(${{tableName}}) }} List</h1>
+<a href="{{ route('${{tableName}}.create') }}">Create New</a>
+<ul>
+    @foreach ($items as $item)
+        <li>{{ $item->title }} - <a href="{{ route('${{tableName}}.show', $item->id) }}">View</a></li>
+    @endforeach
+</ul>

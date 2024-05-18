@@ -1,0 +1,8 @@
+<h1>Edit {{ ucfirst(${{tableName}}) }}</h1>
+<form action="{{ route('${{tableName}}.update', $item->id) }}" method="POST">
+    @csrf
+    @method('PUT')
+    <input type="text" name="title" value="{{ $item->title }}" required>
+    <textarea name="description">{{ $item->description }}</textarea>
+    <button type="submit">Update</button>
+</form>
